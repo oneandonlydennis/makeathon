@@ -56,3 +56,16 @@ body{
     text-align: center;
     margin: auto;
 }
+
+#studentcard{
+    width: 50%;
+    margin: 20% auto 0 auto;
+    background: rgba(220,220,220,0.5);
+}
+
+#studentcard p{
+    margin: 0 auto 2% auto;
+    width: 75%;
+    text-align: center;
+    padding: 2%;
+}

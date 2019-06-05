@@ -27,7 +27,7 @@ require('nav.php');
                 }
             }
             ?>
-            <div class="card">
+            <div class="card" id="graycard">
                 <div class="card-body">
                     <table class="table">
                         <thead class="thead-dark">
