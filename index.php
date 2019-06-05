@@ -1,22 +1,10 @@
 <?php
-require('includes/autoloader.php');
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+require('classes/class_user.php');
+require('includes/database.php');
 if (!User::loggedinUser()) {
     // Persoon is niet ingelogd
-}
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['aanmelden'])) {
-        if ($user = User::checkUser($_POST['username'])) {
-            if ($user->login($_POST['password'])) {
-                $_SESSION['id'] = $user->data('id');
-                // Succesvol ingelogd
-            } else {
-                // Wachtwoord komt niet overeen
-            }
-        } else {
-            // Gebruikersnaam bestaat niet
-        }
-    }
 }
 ?>
 <!doctype html>
@@ -30,8 +18,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+
         <?php
-<<<<<<< HEAD
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if (isset($_POST['aanmelden'])) {
+                if ($user = User::checkUser($_POST['username'])) {
+                    if ($user->login($_POST['password'])) {
+                        $_SESSION['id'] = $user->data('id');
+                        echo 'Ingelogd';
+                    } else {
+                        echo 'Verkeerde wachtwoord';
+                    }
+                } else {
+                    echo 'Verkeerde gebruikersnaam';
+                }
+            }
+        }
+
         if (isset($_SESSION['id'])) {
                 //Activeer pas zodra je ingelogd bent
                 include("includes/home.php");
@@ -56,10 +59,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
             </div>';
         }
-=======
-            //Activeer pas zodra je ingelogd bent
-            //include("includes/home.php");
->>>>>>> e03a7ca256f4c87ad1f7ded80f570cb332a58bfa
         ?>
     </body>
 </html>

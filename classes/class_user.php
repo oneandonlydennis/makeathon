@@ -63,6 +63,29 @@ class User {
         return false;
     }
 
+    public static function registreren($username, $achternaam, $password, $klas) {
+        $database = new Connection;
+        $db = $database->OpenVerbinding();
+
+        $query = $db->prepare('INSERT INTO users (username, achternaam, password, klas) VALUES (:username, :achternaam, :password, :klas)');
+        $query->execute(array(
+           ':username' => $username,
+           ':achternaam' => $achternaam,
+           ':password' => password_hash($password, PASSWORD_BCRYPT),
+           ':klas' => $klas
+        ));
+    }
+
+    public static function deleteUser($id) {
+        $database = new Connection;
+        $db = $database->OpenVerbinding();
+
+        $query = $db->prepare('DELETE FROM users WHERE id = :id');
+        $query->execute(array(
+           ':id' => $id
+        ));
+    }
+
 }
 
 ?>

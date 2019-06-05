@@ -1,16 +1,23 @@
+<?php
+require('../includes/autoloader.php');
+?>
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
+<head>
+    <title>Docenten - Homepagina</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Laad CSS in -->
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/bootstrap.css">
-  </head>
-  <body>
-    <?php include("nav.php");?>
-  </body>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+</head>
+<body>
+    <?php
+        require('nav.php');
+    ?>
+    <div class="section">
+        <h1>Homepagina</h1>
+    </div>
+    <script src="../js/bootstrap.js"></script>
+</body>
 </html>

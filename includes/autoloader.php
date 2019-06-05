@@ -1,7 +1,7 @@
 <?php
 
-require('classes/class_user.php');
-require('includes/database.php');
+require('../classes/class_user.php');
+require('database.php');
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -10,8 +10,5 @@ if (session_status() == PHP_SESSION_NONE) {
 if (User::loggedinUser()) {
     $user = new User($_SESSION['id']);
 }
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
 ?>
