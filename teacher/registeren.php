@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-require('../includes/autoloader.php');
+//require('../includes/autoloader.php');
 ?>
 <!doctype html>
 <html lang="en">
@@ -21,16 +21,18 @@ require('nav.php');
     <div class="container">
         <div class="registreren">
             <?php
+            $errormsg = "";
             if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['aanmaken'])) {
                 if (!empty($_POST['voornaam']) && !empty($_POST['achternaam']) && !empty($_POST['wachtwoord']) && !empty($_POST['klas'])) {
                     if (User::registreren($_POST['voornaam'], $_POST['achternaam'], $_POST['wachtwoord'], $_POST['klas'])) {
-                        echo 'gelukt';
+                        $errormsg = '<div class="alert alert-success">Je hebt de student succesvol toegevoegd!</div>';
                     }
                 }
             }
             ?>
             <div class="card">
                 <div class="card-body">
+                    <?php echo $errormsg; ?>
                     <form method="POST">
                         <div class="form-group">
                             <label for="Voornaam">Voornaam</label>

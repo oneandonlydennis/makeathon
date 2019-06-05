@@ -39,7 +39,7 @@ class User {
             session_destroy();
         }
 
-        header('Location: aanmelden.php');
+        header('Location: ../index.php');
     }
 
     public static function loggedinUser() {

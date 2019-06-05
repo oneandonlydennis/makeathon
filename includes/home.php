@@ -10,6 +10,7 @@
             </div>
         </div>
         <div class="col-6">
+            <a class="landinglink" href="teacher/teacher.php">
             <button class="landingbutton" name="loginteacher">
                 <div class="card" id="landingcards">
                     <div class="card-body">
@@ -17,6 +18,7 @@
                     <img class="card-img-top" src="img/leraar.png" alt="leraar">
                     </div>
                 </div>
+            </a>
         </div>
     </form>
 </div>

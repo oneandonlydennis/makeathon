@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-require('../includes/autoloader.php');
+//require('../includes/autoloader.php');
 ?>
 <!doctype html>
 <html lang="en">
@@ -43,7 +43,7 @@ require('nav.php');
                         $database = new Connection;
                         $db = $database->OpenVerbinding();
 
-                        $gebruikers = $db->prepare('SELECT * FROM users');
+                        $gebruikers = $db->prepare('SELECT * FROM users WHERE role = "Leerling"');
                         $gebruikers->execute();
 
                         while ($row = $gebruikers->fetch(PDO::FETCH_ASSOC)) {
@@ -63,6 +63,6 @@ require('nav.php');
         </div>
     </div>
 </div>
-<script src="../js/bootstrap.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

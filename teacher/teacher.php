@@ -1,5 +1,5 @@
 <?php
-require('../includes/autoloader.php');
+//require('../includes/autoloader.php');
 ?>
 <!doctype html>
 <html lang="en">

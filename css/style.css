@@ -10,6 +10,18 @@
     height: 200px;
 }
 
+.landinglink{
+    color: black;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.landinglink:hover{
+    color: black;
+    list-style-type: none;
+    text-decoration: none;
+}
+
 .landingform{
     display: inline-flex;
     margin: auto;
@@ -38,4 +50,9 @@ body{
     background-image: url('../img/background.png');
     background-size: cover;
     background-position: center;
+}
+
+#wrongpass{
+    text-align: center;
+    margin: auto;
 }
