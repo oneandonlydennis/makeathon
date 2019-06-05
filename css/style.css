@@ -6,16 +6,32 @@
 }
 
 .card img{
-    max-width: 200px;
-    max-height: 200px;
+    width: 200px;
+    height: 200px;
 }
 
 .landingform{
     display: inline-flex;
+    margin: auto;
 }
+
 .landingbutton{
     border: none; 
     background-color: white;
+    max-width: 100%;
+    background: rgba(220,220,220,0.3);
+}
+
+#landingcards:hover{
+    background: rgba(255,255,255,0.9);
+    transition-duration: 0.4s;
+}
+
+#landingcards{
+    padding: auto;
+    height: 18em;
+    max-width: 100%;
+    background: rgba(240,240,240,0.5);
 }
 
 body{
