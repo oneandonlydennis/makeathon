@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a517045-665c-43ca-867e-e3dea5b630ef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/teacher/nav.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teacher/teacher.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +112,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559727242533</updated>
-      <workItem from="1559727243799" duration="5459000" />
+      <workItem from="1559727243799" duration="5732000" />
     </task>
     <task id="LOCAL-00001" summary="inlogsysteem">
       <created>1559731423725</created>
@@ -143,7 +146,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5459000" />
+    <option name="totallyTimeSpent" value="5732000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1020" extended-state="6" />
