@@ -3,7 +3,6 @@
 class User {
 
     private $fields = [];
-    //hoi
 
     public function __construct($id) {
         $database = new Connection;
