@@ -1,0 +1,51 @@
+.content{
+    background-color:  #f2efef;
+    min-height: 60vh;
+    margin: 20px 0px;
+    padding: 2em;
+}
+
+footer{
+    min-height: 20vh;
+    background-color: white;
+    border-top: 1px solid black;
+}
+
+#nav{
+    background-color: #ff4c00;
+    /* max-height: 7vh; */
+}
+
+#jumbo{
+    background-color: white;
+    border-bottom: 1px solid black;
+    
+}
+#icon{
+  width: 20px;
+}
+
+
+
+
+
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
