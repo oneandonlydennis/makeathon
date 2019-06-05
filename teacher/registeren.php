@@ -22,8 +22,16 @@ require('nav.php');
         <div class="registreren">
             <?php
             $errormsg = "";
-            if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['aanmaken'])) {
-                if (!empty($_POST['voornaam']) && !empty($_POST['achternaam']) && !empty($_POST['wachtwoord']) && !empty($_POST['klas'])) {
+            if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['aanmaken'])) {    
+                if (empty($_POST['voornaam'])){
+                    $errormsg = '<div class="alert alert-danger">Je bent vergeten de voornaam in te voeren!</div>';
+                } else if(empty($_POST['achternaam'])){
+                    $errormsg = '<div class="alert alert-danger">Je bent vergeten de achternaam in te voeren!</div>';
+                } else if(empty($_POST['wachtwoord'])){
+                    $errormsg = '<div class="alert alert-danger">Je bent vergeten het wachtwoord in te voeren!</div>';
+                } else if(empty($_POST['confirm'])){
+                    $errormsg = '<div class="alert alert-danger">Je bent vergeten het wachtwoord te bevestigen!</div>';
+                } else {
                     if (User::registreren($_POST['voornaam'], $_POST['achternaam'], $_POST['wachtwoord'], $_POST['klas'])) {
                         $errormsg = '<div class="alert alert-success">Je hebt de student succesvol toegevoegd!</div>';
                     }
@@ -45,6 +53,10 @@ require('nav.php');
                         <div class="form-group">
                             <label for="Wachtwoord">Wachtwoord</label>
                             <input name="wachtwoord" type="password" class="form-control"placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm">Confirmatie wachtwoord</label>
+                            <input name="confirm" type="password" class="form-control"placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="Groep">Klas</label>

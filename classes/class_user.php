@@ -74,6 +74,8 @@ class User {
            ':password' => password_hash($password, PASSWORD_BCRYPT),
            ':klas' => $klas
         ));
+
+        return true;
     }
 
     public static function deleteUser($id) {

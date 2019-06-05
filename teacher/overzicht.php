@@ -52,7 +52,7 @@ require('nav.php');
                                 <th scope = "row" > '. $row['username'] .'</th>
                                 <td> '. $row['achternaam'] .'</td>
                                 <td> '. $row['klas'] .'</td>
-                                <td><form method="POST"><button type="submit" class="btn btn-success">Bewerken</button><button name="verwijderen" value="'. $row['id'] .'" type="submit" class="btn btn-danger">Verwijderen</button></form></td>
+                                <td><form method="POST" style="display: inline-flex;"><button type="submit" class="btn btn-success">Bewerken</button><button name="verwijderen" value="'. $row['id'] .'" type="submit" class="btn btn-danger">Verwijderen</button></form></td>
                             </tr >';
                             }
                         ?>
