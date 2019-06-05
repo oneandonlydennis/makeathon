@@ -31,7 +31,7 @@
         </div>
         <?php
             //Activeer pas zodra je ingelogd bent
-            //include("includes/home.php");
+            include("includes/home.php");
         ?>
     </body>
 </html>
