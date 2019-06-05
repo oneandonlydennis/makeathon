@@ -31,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </head>
     <body>
         <?php
+<<<<<<< HEAD
         if (isset($_SESSION['id'])) {
                 //Activeer pas zodra je ingelogd bent
                 include("includes/home.php");
@@ -55,6 +56,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
             </div>';
         }
+=======
+            //Activeer pas zodra je ingelogd bent
+            //include("includes/home.php");
+>>>>>>> e03a7ca256f4c87ad1f7ded80f570cb332a58bfa
         ?>
     </body>
 </html>
