@@ -1,5 +1,8 @@
 <?php
     require('../includes/autoloader.php');
+    if(isset($_POST['start'])){
+        header('Location: sommen.php');
+    }
 ?>
 <html>
     <head>

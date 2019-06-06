@@ -11,8 +11,8 @@
             for($y=1; $y<10; $y++){
                 $rand1 = rand(1,10);
                 $rand2 = rand(1,10);
-                $form = '$rand1' . ' x ' . $rand2 . ' = <input type=\'number\' name=\'sum".$y."\'><br>"';
-                return $form;
+                $form = "$rand1 X $rand2 = <input type='number' name='num$y'><br>";
+                echo $form;
                 $this->sommen[] = [$rand1, $rand2, $rand1*$rand2];
             }
         }

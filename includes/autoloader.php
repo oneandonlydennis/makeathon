@@ -1,6 +1,7 @@
 <?php
 
 require('../classes/class_user.php');
+require('../classes/class_student.php');
 require('database.php');
 
 if (session_status() == PHP_SESSION_NONE) {

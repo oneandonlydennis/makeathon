@@ -69,3 +69,8 @@ body{
     text-align: center;
     padding: 2%;
 }
+
+#sums input{
+    position: fixed;
+    left: 33%;
+}
