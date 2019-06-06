@@ -1,6 +1,9 @@
 <?php
-    //require("../includes/autoloader.php");
     require("../classes/class_student.php");
+    require("../includes/database.php");
+
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
 ?>
 
 <html>
@@ -19,7 +22,6 @@
                         $kid->GetMultiply();
                         if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['berekenen'])){
 
-//                            echo $kid->checkAntwoorden($_POST);
                             if ($kid->checkAntwoorden($_POST)) {
                                 $kid->checkBeoordeling();
                             }
