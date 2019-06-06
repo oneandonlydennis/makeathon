@@ -29,7 +29,7 @@ if (!User::loggedinUser()) {
                         $errormsg = '<div class="alert alert-danger" id="wrongpass">Je hebt het verkeerde wachtwoord ingevoerd!</div>';
                     }
                 } else {
-                    $errormsg = '<div class="alert alert-danger" id="wrongpass">Je hebt het verkeerde gebruikersnaam ingevoerd!</div>';
+                    $errormsg = '<div class="alert alert-danger" id="wrongpass">Je hebt de verkeerde gebruikersnaam ingevoerd!</div>';
                 }
             }
         }
