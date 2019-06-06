@@ -9,8 +9,8 @@
 
         public function multiply(){
             for($y=0; $y<20; $y++){
-                $rand1 = rand(1, 9);
-                $rand2 = rand(1, 9);
+                $rand1 = rand(1,9);
+                $rand2 = rand(1,9);
                 $this->sommen[] = [$rand1 * $rand2];
 
                 if ($y <= 5) {
@@ -35,8 +35,6 @@
                 if(isset($_POST['num0'])){
                     if($this->sommen[$z][0] == $_POST["num$z"]){
                         $points++;
-                    }else{
-                        
                     }
                 }
             }

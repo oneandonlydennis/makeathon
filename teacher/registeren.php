@@ -31,6 +31,8 @@ require('nav.php');
                     $errormsg = '<div class="alert alert-danger">Je bent vergeten het wachtwoord in te voeren!</div>';
                 } else if(empty($_POST['confirm'])){
                     $errormsg = '<div class="alert alert-danger">Je bent vergeten het wachtwoord te bevestigen!</div>';
+                } else if(strcmp($_POST['wachtwoord'], $_POST['confirm']) !== 0){
+                    $errormsg = '<div class="alert alert-danger">De wachtwoorden komen niet overeen!</div>';
                 } else {
                     if (User::registreren($_POST['voornaam'], $_POST['achternaam'], $_POST['wachtwoord'], $_POST['klas'])) {
                         $errormsg = '<div class="alert alert-success">Je hebt de student succesvol toegevoegd!</div>';
