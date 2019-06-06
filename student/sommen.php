@@ -1,10 +1,6 @@
 <?php
-    session_start();
+    //require("../includes/autoloader.php");
     require("../classes/class_student.php");
-
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
-
 ?>
 
 <html>
@@ -16,11 +12,13 @@
     <body>
         <div class="card" id="studentcard">
             <div class="card-body" id="sums">
-                <form method="POST">
+            <form method="POST">
 <!--                    <div class="row">-->
                     <?php
                         $kid = new Student;
-                        $kid->arrayresult();
+                        if(isset($_POST['berekenen'])){
+                            $kid->arrayresult();
+                        }
                     ?>
 <!--                    </div>-->
                     <button name="berekenen" type="submit" class="btn btn-primary">Klik hier om je toets in te leveren</button>

@@ -30,10 +30,28 @@
         }
 
         public function arrayresult() {
-            return var_dump($this->sommen[5][0]);
-//            if ($this->sommen[0] == $sum1 && $this->sommen[1] == $sum2) {
-//                return true;
-//            }
+            $points = 0;
+            for($z=0; $z<20; $z++){
+                if(isset($_POST['num0'])){
+                    if($this->sommen[$z][0] == $_POST["num$z"]){
+                        $points++;
+                    }else{
+                        
+                    }
+                }
+            }
+            $score = $points / 20 * 10;
+            if($score>5.5){
+                echo "Je bent geslaagd! Je score is: ".$score.".";
+            }
+            else if($score==5.5){
+                echo "Je bent nog net op het nippertje geslaagd! Volgende keer iets beter oefenen!";
+            }
+            else if($score<5.5){
+                echo "Jammer genoeg heb je het niet gehaald! Je hebt een ".$score." gehaald, en dit moest minimaal een 5.5 zijn!";
+            }
+            else{
+            }
         }
     }
 ?>
