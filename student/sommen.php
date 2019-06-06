@@ -9,11 +9,6 @@
         <link rel="stylesheet" href="../css/bootstrap.css">
         <link rel="stylesheet" href="../css/sommen.css">
 
-        <script type="text/javascript">
-            function checkanswers(){
-                alert('check');
-            }
-        </script>
     </head>
     <body>
         <div class="card" id="studentcard">
@@ -21,11 +16,16 @@
             <form method="POST">
                     <?php
                         $kid = new Student;
-                        if(isset($_POST['berekenen'])){
-                            $kid->arrayresult();
+                        $kid->GetMultiply();
+                        if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['berekenen'])){
+
+//                            echo $kid->checkAntwoorden($_POST);
+                            if ($kid->checkAntwoorden($_POST)) {
+                                $kid->checkBeoordeling();
+                            }
                         }
                     ?>
-                    <button name="berekenen" type="button" onclick="checkanswers()" class="btn btn-primary">Klik hier om je toets in te leveren</button>
+                    <button name="berekenen" type="submit" class="btn btn-primary">Klik hier om je toets in te leveren</button>
                 </form>
             </div>
         </div>

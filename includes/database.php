@@ -5,7 +5,7 @@ class Connection {
     // Credentials
     private $servernaam = "mysql:host=localhost;dbname=rekenmaatje";
     private $gebruiker = "root";
-    private $wachtwoord = "";
+    private $wachtwoord = "2hg9tg9u";
 
     // Opties
     public $opties  = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,);
