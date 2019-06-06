@@ -1,3 +1,6 @@
+<?php
+require('autoloader.php');
+?>
 <div class="row">
     <form method="POST" class="landingform">
         <div class="col-6">

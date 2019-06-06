@@ -1,11 +1,13 @@
 <?php
-    require("../classes/class_student.php");
-    require("../includes/database.php");
-
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
+require('../classes/class_user.php');
+require('../classes/class_student.php');
+require('../includes/database.php');
+require('../includes/autoloader.php');
+if (!User::loggedinUser()) {
+    header('Location: http://rekenmaatje.nl/index.php');
+    exit;
+}
 ?>
-
 <html>
     <head>
         <link rel="stylesheet" href="../css/style.css">
@@ -22,7 +24,7 @@
                         $kid->GetMultiply();
                         if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['berekenen'])){
 
-                            if ($kid->checkAntwoorden($_POST)) {
+                            if ($kid->checkAntwoorden()) {
                                 $kid->checkBeoordeling();
                             }
                         }

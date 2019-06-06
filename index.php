@@ -1,11 +1,8 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 require('classes/class_user.php');
+require('classes/class_student.php');
 require('includes/database.php');
-if (!User::loggedinUser()) {
-    // Persoon is niet ingelogd
-}
+require('includes/autoloader.php');
 ?>
 <!doctype html>
 <html lang="en">

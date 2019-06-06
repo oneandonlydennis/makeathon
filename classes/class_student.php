@@ -25,7 +25,7 @@
             }
         }
 
-        public function checkAntwoorden($sommen) {
+        public function checkAntwoorden() {
             $i = 0;
             for($x = 0; $x < 20; $x++) {
                 if ($_POST['input'][$x] == $_POST['answers'][$x]) {
@@ -50,6 +50,8 @@
                ':datum' => date('Y-m-d H:i:s'),
                ':score' => $score
             ));
+
+            header('Location: http://rekenmaatje.nl/student/bedankt.php');
 
         }
     }

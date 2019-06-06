@@ -1,12 +1,12 @@
 <?php
-    require("../includes/autoloader.php");
-    if(isset($_POST['logout'])){
-        User::logout();
-        echo 'Je bent afgemeld';
-    }
-    if(isset($_SESSION['id'])){
-        echo "test";
-    }
+require('../classes/class_user.php');
+require('../classes/class_student.php');
+require('../includes/database.php');
+require('../includes/autoloader.php');
+if (!User::loggedinUser()) {
+    header('Location: http://rekenmaatje.nl/index.php');
+    exit;
+}
 ?>
 <div class="menu">
     <h4 class="logo">Rekenmaatje</h4>

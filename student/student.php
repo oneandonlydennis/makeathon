@@ -1,8 +1,12 @@
 <?php
-    require('../includes/autoloader.php');
-    if(isset($_POST['start'])){
-        header('Location: sommen.php');
-    }
+require('../classes/class_user.php');
+require('../classes/class_student.php');
+require('../includes/database.php');
+require('../includes/autoloader.php');
+if (!User::loggedinUser()) {
+    header('Location: http://rekenmaatje.nl/index.php');
+    exit;
+}
 ?>
 <html>
     <head>
@@ -14,7 +18,7 @@
             <img src="../img/student.png" alt="Student" class="studentimg">
             <div class="card-body">
                 <p class="card-text">Welkom bij Rekenmaatje! DÉ plek om te oefenen met je rekensommen! Wanneer je op de knop hieronder klikt, begin je met de eerste oefeningen. Deze moet je allemaal invullen voordat je doorgaat naar het volgende gedeelte. Als je een antwoord niet weet, mag je hem leeg laten. Veel succes!</p>
-                <form method="post"><button type="submit" name="start" id="start" class="btn btn-primary btn-lg btn-block">Begin met de toets!</button></form>
+                <a href="sommen.php" type="submit" class="btn btn-primary btn-lg btn-block">Begin met de toets!</a>
             </div>
         </div>
     </body>
