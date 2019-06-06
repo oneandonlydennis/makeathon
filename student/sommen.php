@@ -11,9 +11,12 @@
     <body>
         <div class="card" id="studentcard">
             <div class="card-body" id="sums">
-                <?php
-                    $kid = new Student;
-                ?>
+                <form method="post">
+                    <?php
+                        $kid = new Student;
+                    ?>
+                <button type="submit" class="btn btn-primary">Bereken!</button>
+                </form>
             </div>
         </div>
     </body>

@@ -74,3 +74,10 @@ body{
     position: fixed;
     left: 33%;
 }
+
+#sums button{
+    position: fixed;
+    left: 50%;
+    top: 68%;
+    opacity: 0.8;
+}
