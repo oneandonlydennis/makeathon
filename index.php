@@ -36,8 +36,14 @@ require('includes/autoloader.php');
         
         <?php
         if (isset($_SESSION['id'])) {
-                //Activeer pas zodra je ingelogd bent
+            //Activeer pas zodra je ingelogd bent
+            if ($user->data('role') == 'Leerling') {
+                header('Location: http://rekenmaatje.nl/student/student.php');
+                exit;
+            } else if ($user->data('role') == 'Docent') {
                 include("includes/home.php");
+            }
+
         } else {
 
             echo '

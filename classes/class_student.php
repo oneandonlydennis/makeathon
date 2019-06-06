@@ -54,5 +54,29 @@
             header('Location: http://rekenmaatje.nl/student/bedankt.php');
 
         }
+
+        public function deleteResult($id) {
+            $database = new Connection;
+            $db = $database->OpenVerbinding();
+
+            $query = $db->prepare('DELETE FROM activiteiten WHERE id = :id');
+            $query->execute(array(
+                ':id' => $id
+            ));
+        }
+
+        public function checkMarked() {
+            $database = new Connection;
+            $db = $database->OpenVerbinding();
+
+            $query = $db->prepare('SELECT * FROM activiteiten WHERE userid = :userid');
+            $query->execute(array(
+                ':userid' => $_SESSION['id']
+            ));
+
+            if ($query->rowCount() > 0) {
+                return true;
+            }
+        }
     }
 ?>

@@ -17,7 +17,7 @@
             <div class="registreren">
                 <?php
                 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['verwijderen'])) {
-                    if (Student::deleteResult($_POST['verwijderen'])) {
+                    if (User::deleteUser($_POST['verwijderen'])) {
                         // Succesvol verwijderd
                     }
                 }
@@ -56,7 +56,7 @@
                                         <th scope = "row" > ' . $info['username'] . ' ' . $info['achternaam'] . '</th>
                                         <td> ' . $row['leerstof'] . '</td>
                                         <td> ' . $row['datum'] . '</td>
-                                        <td> ' . $row['score'] . '/10 Cijfer</td>
+                                        <td> ' . $row['score'] . '/20 Punten</td>
                                         <td><form method="POST" style="display: inline-flex;"><button type="submit" class="btn btn-success">Inzien</button><button name="verwijderen" value="' . $row['id'] . '" type="submit" class="btn btn-danger">Herkansen</button></form></td>
                                     </tr >';
                                 }

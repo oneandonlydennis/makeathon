@@ -7,12 +7,16 @@ if (!User::loggedinUser()) {
     header('Location: http://rekenmaatje.nl/index.php');
     exit;
 }
+
+if (isset($_POST['logout'])) {
+    $user->logout();
+}
 ?>
 <div class="menu">
     <h4 class="logo">Rekenmaatje</h4>
     <ul class="nav flex-column">
         <li class="nav-item">
-            <a class="nav-link active" href="#">Homepagina</a>
+            <a class="nav-link active" href="teacher.php">Homepagina</a>
         </li>
         <li class="nav-item">
             <a class="nav-link active" href="overzicht.php">Leerling overzicht</a>
