@@ -21,6 +21,9 @@ require('nav.php');
                     // Succesvol verwijderd
                 }
             }
+            if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['bewerken'])) {
+                header("Location: bewerken.php");
+            }
             ?>
             <div class="card" id="graycard">
                 <div class="card-body">
@@ -47,7 +50,7 @@ require('nav.php');
                                 <th scope = "row" > '. $row['username'] .'</th>
                                 <td> '. $row['achternaam'] .'</td>
                                 <td> '. $row['klas'] .'</td>
-                                <td><form method="POST" style="display: inline-flex;"><button type="submit" class="btn btn-success">Bewerken</button><button name="verwijderen" value="'. $row['id'] .'" type="submit" class="btn btn-danger">Verwijderen</button></form></td>
+                                <td><form method="POST" style="display: inline-flex;"><a href="bewerken.php?id='.$row['id'].'" class="btn btn-success">Bewerken</a><button name="verwijderen" value="'. $row['id'] .'" type="submit" class="btn btn-danger">Verwijderen</button></form></td>
                             </tr >';
                             }
                         ?>

@@ -55,7 +55,7 @@
 
         }
 
-        public function deleteResult($id) {
+        public static function deleteResult($id) {
             $database = new Connection;
             $db = $database->OpenVerbinding();
 
@@ -65,7 +65,7 @@
             ));
         }
 
-        public function checkMarked() {
+        public static function checkMarked() {
             $database = new Connection;
             $db = $database->OpenVerbinding();
 

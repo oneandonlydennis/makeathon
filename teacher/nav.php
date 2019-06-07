@@ -16,7 +16,7 @@ if (isset($_POST['logout'])) {
     <h4 class="logo">Rekenmaatje</h4>
     <ul class="nav flex-column">
         <li class="nav-item">
-            <a class="nav-link active" href="teacher.php">Homepagina</a>
+            <a class="nav-link active" href="teacher.php">Leerling studievoortgang</a>
         </li>
         <li class="nav-item">
             <a class="nav-link active" href="overzicht.php">Leerling overzicht</a>

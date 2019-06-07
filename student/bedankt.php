@@ -4,7 +4,7 @@ require('../classes/class_student.php');
 require('../includes/database.php');
 require('../includes/autoloader.php');
 if (!User::loggedinUser()) {
-    header('Location: http://rekenmaatje.nl/index.php');
+    header('Location: http://www.rekenmaatje.nl/index.php');
     exit;
 }
 

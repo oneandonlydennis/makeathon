@@ -21,6 +21,9 @@
                         // Succesvol verwijderd
                     }
                 }
+                if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['inzien'])) {
+                    // Zie je sommen in
+                }
                 ?>
                 <div class="card" id="graycard">
                     <div class="card-body">
@@ -57,7 +60,7 @@
                                         <td> ' . $row['leerstof'] . '</td>
                                         <td> ' . $row['datum'] . '</td>
                                         <td> ' . $row['score'] . '/10 Cijfer</td>
-                                        <td><form method="POST" style="display: inline-flex;"><button type="submit" class="btn btn-success">Inzien</button><button name="verwijderen" value="' . $row['id'] . '" type="submit" class="btn btn-danger">Herkansen</button></form></td>
+                                        <td><form method="POST" style="display: inline-flex;"><button name="verwijderen" value="' . $row['id'] . '" type="submit" class="btn btn-danger">Herkansen</button></form></td>
                                     </tr >';
                                 }
                             }

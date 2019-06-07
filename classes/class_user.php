@@ -78,6 +78,22 @@ class User {
         return true;
     }
 
+    public static function bijwerken($id, $username, $achternaam, $klas){
+        $database = new Connection; 
+        $db = $database->OpenVerbinding();
+
+        $query = $db->prepare('UPDATE users SET username = :username, achternaam = :achternaam, klas = :klas WHERE id = :id');
+
+        $query->execute(array(
+            ':id' => $id,
+            ':username' => $username,
+            ':achternaam' => $achternaam,
+            ':klas' => $klas
+        ));
+
+        return true;
+    }
+
     public static function deleteUser($id) {
         $database = new Connection;
         $db = $database->OpenVerbinding();
